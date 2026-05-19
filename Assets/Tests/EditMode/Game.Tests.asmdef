@@ -1,0 +1,14 @@
+{
+    "name": "Game.Tests",
+    "rootNamespace": "",
+    "references": [
+        "Game"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}
