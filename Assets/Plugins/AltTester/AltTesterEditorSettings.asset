@@ -326,8 +326,8 @@ MonoBehaviour:
     path: 
     _testSelectedCount: 0
   - _selected: 1
-    _testName: D:/funity/Test1/Library/ScriptAssemblies/UnityEngine.TestRunner.dll
-    _testAssembly: UnityEngine.TestRunner
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/AltTester.AltTesterUnitySDK.Editor.dll
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
     _status: 0
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestAssembly
@@ -340,8 +340,8 @@ MonoBehaviour:
     path: 
     _testSelectedCount: 0
   - _selected: 1
-    _testName: D:/funity/Test1/Library/ScriptAssemblies/AltTester.AltTesterUnitySDK.Editor.dll
-    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+    _testAssembly: UnityEngine.TestRunner
     _status: 0
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestAssembly
@@ -385,6 +385,6 @@ MonoBehaviour:
   ResetConnectionData: 0
   UID: 
   UsingLocation: 0
-  HideGreenPopup: 1
+  HideGreenPopup: 0
   KeepAUTSymbolDefined: 1
-  KeepAltTesterPrefabInScene: 1
+  KeepAltTesterPrefabInScene: 0

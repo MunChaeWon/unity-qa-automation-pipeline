@@ -10,7 +10,7 @@ taskkill /f /im "allure.exe" 2>nul
 timeout /t 2
 
 :: [2단계] 주군께서 명시하신 진짜 경로의 유니티 빌드 파일(Test1.exe)을 백그라운드로 강제 실행합니다
-start "" "D:\funity\Test1\Build\Test1.exe" -screen-width 640 -screen-height 480 -screen-fullscreen 0
+start "" "D:\funity\Test1\Build\Test1.exe" -screen-width 640 -screen-height 480 -screen-fullscreen 0 -force-d3d11
 echo 유니티 게임(Test1.exe) 기상 완료. 소켓 포트 대기를 위해 10초간 대기합니다...
 timeout /t 10
 
