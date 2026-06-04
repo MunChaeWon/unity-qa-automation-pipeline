@@ -22,8 +22,8 @@ jobs:
           clean: false
 
       - name: Execute Unity QA Master Pipeline
-        # shell: cmd 설정을 넣어 윈도우 배치 파일이 100% 안전하게 구동되도록 박아버립니다
         shell: cmd
+        # 주군의 alt-tests 폴더 안에 있는 진짜 구글/슬랙 파이프라인 배치 파일명을 정확히 지목합니다!
         run: |
           cd /d D:\funity\Test1
-          call alt-tests\run_alt_ci_pipeline.bat
+          call D:\funity\Test1\alt-tests\run_alt_google_slack_pipeline.bat
