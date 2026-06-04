@@ -27,3 +27,6 @@ jobs:
         run: |
           cd /d D:\funity\Test1
           call alt-tests\run_alt_ci_pipeline.bat
+
+# GitHub Actions Runner 작업 폴더 제외
+actions-runner/
