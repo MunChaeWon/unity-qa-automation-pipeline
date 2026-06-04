@@ -21,8 +21,9 @@ jobs:
         with:
           clean: false
 
-      # 32번째 줄 주변의 들여쓰기와 명령어 구조를 공인 표준 규격으로 완벽히 정정했습니다
       - name: Execute Unity QA Master Pipeline
+        # shell: cmd 설정을 넣어 윈도우 배치 파일이 100% 안전하게 구동되도록 박아버립니다
+        shell: cmd
         run: |
           cd /d D:\funity\Test1
           call alt-tests\run_alt_ci_pipeline.bat
