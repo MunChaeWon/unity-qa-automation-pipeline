@@ -1,11 +1,6 @@
 import pytest
 
-from live_google_sheet_reporter import (
-    extract_tc_id,
-    mark_running,
-    mark_finished,
-    finalize_run,
-)
+from live_excel_reporter import extract_tc_id, mark_running, mark_finished
 
 
 _started_tests = set()
@@ -38,21 +33,22 @@ def pytest_runtest_makereport(item, call):
     if item.nodeid in _finished_tests:
         return
 
+    # setup 단계에서 실패한 경우:
+    # 예: AltDriver 연결 실패, fixture 오류, 환경 오류
     if report.when == "setup" and report.failed:
-        mark_finished(tc_id, item.name, "Broken")
+        message = str(report.longrepr)
+        mark_finished(tc_id, item.name, "Broken", message[:500])
         _finished_tests.add(item.nodeid)
         return
 
+    # 실제 테스트 본문 단계 결과
     if report.when == "call":
         if report.passed:
             mark_finished(tc_id, item.name, "Pass")
         elif report.failed:
-            mark_finished(tc_id, item.name, "Fail")
+            message = str(report.longrepr)
+            mark_finished(tc_id, item.name, "Fail", message[:500])
         elif report.skipped:
-            mark_finished(tc_id, item.name, "Skipped")
+            mark_finished(tc_id, item.name, "Skipped", "pytest skipped")
 
         _finished_tests.add(item.nodeid)
-
-
-def pytest_sessionfinish(session, exitstatus):
-    finalize_run()
