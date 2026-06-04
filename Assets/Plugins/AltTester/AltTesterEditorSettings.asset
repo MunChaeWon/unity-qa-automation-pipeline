@@ -16,12 +16,362 @@ MonoBehaviour:
   AdbPath: /usr/local/bin/adb
   IProxyPath: /usr/local/bin/iproxy
   XcrunPath: /usr/bin/xcrun
-  MyTests: []
+  MyTests:
+  - _selected: 0
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/Game.Tests.dll
+    _testAssembly: Game.Tests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 2
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerHealthTest
+    _testAssembly: Game.Tests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: D:/funity/Test1/Library/ScriptAssemblies/Game.Tests.dll
+    _testCaseCount: 2
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerHealthTest.PlayerHealth_WhenDamageTaken_HealthDecreases
+    _testAssembly: Game.Tests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerHealthTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/EditMode/PlayerHealthTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerHealthTest.PlayerHealth_WhenHealthBelowZero_ReturnZero
+    _testAssembly: Game.Tests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerHealthTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/EditMode/PlayerHealthTest.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/Unity.Rider.Editor.dll
+    _testAssembly: Unity.Rider.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+    _testAssembly: UnityEditor.TestRunner
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll
+    _testAssembly: Unity.TestTools.CodeCoverage.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/PlayMode.dll
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 11
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PipelineFailureVerificationTest
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: D:/funity/Test1/Library/ScriptAssemblies/PlayMode.dll
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PipelineFailureVerificationTest.TC_FAIL_999_PipelineFailureVerification
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PipelineFailureVerificationTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PipelineFailureVerificationTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: D:/funity/Test1/Library/ScriptAssemblies/PlayMode.dll
+    _testCaseCount: 10
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_001_PlayerObjectExists
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_002_PlayerControllerExists
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_003_PlayerControlEnabledByDefault
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_004_PlayerMaxSpeedIsValid
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_005_PlayerJumpSpeedIsValid
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_006_PlayerMoveRight_TargetVelocityIncreases
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_007_PlayerMoveLeft_TargetVelocityDecreases
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_008_PlayerMoveRight_SpriteFacesRight
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_009_PlayerMoveLeft_SpriteFacesLeft
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: PlayerFunctionPlayModeTest.TC_010_PlayerHealthComponentExists
+    _testAssembly: PlayMode
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: PlayerFunctionPlayModeTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/PlayMode/PlayerFunctionPlayModeTest.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll
+    _testAssembly: Unity.VisualStudio.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+    _testAssembly: UnityEngine.TestRunner
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/AltTester.AltTesterUnitySDK.Editor.dll
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: D:/funity/Test1/Library/ScriptAssemblies/Unity.InputSystem.TestFramework.dll
+    _testAssembly: Unity.InputSystem.TestFramework
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
   Scenes:
   - _toBeBuilt: 1
     _path: Assets/Scenes/SampleScene.unity
     _buildIndex: 0
-  platform: 2
+  platform: 3
   StandaloneTarget: 5
   RanInEditor: 0
   ScenePathDisplayed: 0
