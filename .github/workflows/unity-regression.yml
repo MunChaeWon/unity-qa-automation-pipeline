@@ -23,7 +23,7 @@ jobs:
 
       - name: Execute Unity QA Master Pipeline
         shell: cmd
-        # 주군의 alt-tests 폴더 안에 있는 진짜 구글/슬랙 파이프라인 배치 파일명을 정확히 지목합니다!
+        # 새로 만든 무인 자동화 전용 배치 파일을 조준하도록 정밀 타격 설정을 변경했습니다
         run: |
           cd /d D:\funity\Test1
-          call D:\funity\Test1\alt-tests\run_alt_google_slack_pipeline.bat
+          call D:\funity\Test1\alt-tests\run_github_actions_pipeline.bat
