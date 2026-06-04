@@ -1,23 +1,26 @@
-# 깃허브 상단 Actions 탭에 노출될 업무 규칙서의 영롱한 이름이옵니다
 name: Unity QA Automation Regression Pipeline
 
-# 언제 이 무인 일꾼을 잠에서 깨울지 결정하는 트리거 조건이옵니다 [cite: 4]
+# 언제 이 무인 일꾼을 잠에서 깨울지 결정하는 트리거 조건이옵니다
 on:
   push:
-    [cite_start]branches: [ "main" ] # 주군의 main 브랜치에 새로운 커밋이 push될 때 
+    branches:
+      - main
   pull_request:
-    [cite_start]branches: [ "main" ] # main 브랜치 방향으로 Pull Request가 생성될 때 
+    branches:
+      - main
 
-# 일꾼이 순차적으로 처리해야 할 실제 업무 내용(Job)이옵니다
+# 일꾼이 순서대로 처리해야 할 실제 업무 내용(Job)이옵니다
 jobs:
   run-regression-tests:
-    # 2단계에서 주군이 등록한 내 PC(self-hosted runner)를 정확히 지목하여 깨우나이다 [cite: 15]
+    # 주군의 PC(self-hosted runner)를 정확히 지목하여 깨우나이다
     runs-on: self-hosted
     
     steps:
       # [1단계] 깃허브에 올라온 최신 소스 코드를 내 PC 폴더로 다운로드(동기화)함
       - name: Checkout repository code
-        uses: actions/checkout@v4
+        uses: actions/actions-runner-win-x64@v4
+        with:
+          clean: false
 
       # [2단계] 주군의 프로젝트 기지 내부에 만들어둔 CI 통합 배치 파일을 백그라운드로 자동 구동함
       - name: Execute Unity QA Master Pipeline
