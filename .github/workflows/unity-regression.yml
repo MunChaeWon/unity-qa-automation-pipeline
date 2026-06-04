@@ -16,9 +16,9 @@ jobs:
     runs-on: self-hosted
     
     steps:
-      # [1단계] 깃허브에 올라온 최신 소스 코드를 내 PC 폴더로 다운로드(동기화)함
+      # [1단계] 깃허브 공식 체크아웃 플러그인을 사용하여 최신 소스 코드를 내 PC 폴더로 동기화함
       - name: Checkout repository code
-        uses: actions/actions-runner-win-x64@v4
+        uses: actions/checkout@v4
         with:
           clean: false
 
