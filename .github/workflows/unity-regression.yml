@@ -1,6 +1,5 @@
 name: Unity QA Automation Regression Pipeline
 
-# 언제 이 무인 일꾼을 잠에서 깨울지 결정하는 트리거 조건이옵니다
 on:
   push:
     branches:
@@ -9,21 +8,22 @@ on:
     branches:
       - main
 
-# 일꾼이 순서대로 처리해야 할 실제 업무 내용(Job)이옵니다
+# 2026년 깃허브 정책에 맞추어 Node.js 24 환경을 강제로 선언하여 경고를 잠재웁니다
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   run-regression-tests:
-    # 주군의 PC(self-hosted runner)를 정확히 지목하여 깨우나이다
     runs-on: self-hosted
     
     steps:
-      # [1단계] 깃허브 공식 체크아웃 플러그인을 사용하여 최신 소스 코드를 내 PC 폴더로 동기화함
       - name: Checkout repository code
         uses: actions/checkout@v4
         with:
           clean: false
 
-      # [2단계] 주군의 프로젝트 기지 내부에 만들어둔 CI 통합 배치 파일을 백그라운드로 자동 구동함
+      # 에러가 발생하더라도 구체적으로 어디서 터졌는지 추적하기 위해 환경을 정비합니다
       - name: Execute Unity QA Master Pipeline
         run: |
           cd /d D:\funity\Test1
-          alt-tests\run_alt_ci_pipeline.bat
+          call alt-tests\run_alt_ci_pipeline.bat
