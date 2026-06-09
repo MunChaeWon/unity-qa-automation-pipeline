@@ -26,10 +26,18 @@ jobs:
         uses: actions/checkout@v3
         with:
           clean: true          # 기존 워크스페이스의 오염된 캐시 및 잔재 파일을 강제 청소
-          submodules: false    # 잘못 인식된 가짜 서브모듈(gitlink) 추적을 원천 차단
+          submodules: false    # 잘못 인식된 가짜 서브모듈(gitlink) 추적을 원천 차단\
+          persist-credentials: false  
 
       - name: Execute Unity QA Master Pipeline
         shell: cmd
         run: |
           cd /d D:\funity\Test1
           call D:\funity\Test1\alt-tests\run_github_actions_pipeline.bat
+
+      - name: Cleanup git submodule config
+  if: always()
+  shell: cmd
+  run: |
+    cd /d D:\actions-runner\_work\unity-qa-automation-pipeline\unity-qa-automation-pipeline
+    git config --local --remove-section submodule 2>nul || exit 0

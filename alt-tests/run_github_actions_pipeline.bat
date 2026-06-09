@@ -7,12 +7,12 @@ echo ========================================================
 :: [1단계] 안정적인 테스트 환경 확보를 위해 기존 잔여 프로세스 강제 종료
 taskkill /f /im "Test1.exe" 2>nul
 taskkill /f /im "allure.exe" 2>nul
-ping 127.0.0.1 -n 3 >nul
+timeout /t 2 >nul
 
-:: [2단계] 타깃 유니티 빌드 파일(Test1.exe) 가동 및 소켓 대기
+:: [2단계] 타깃 유니티 빌드 파일(Test1.exe) 백그라운드 구동 및 소켓 대기
 start "" "D:\funity\Test1\Build\Test1.exe" -screen-width 640 -screen-height 480 -screen-fullscreen 0 -force-d3d11
 echo [INFO] Unity 게임 프로세스 기동 완료. 소켓 포트 활성화를 위해 10초간 대기합니다.
-ping 127.0.0.1 -n 11 >nul
+timeout /t 10 >nul
 
 :: [3단계] 통합 테스트 및 마스터 파이프라인(Google Sheets / Slack) 배치 파일 호출
 echo [INFO] 마스터 자동화 파이프라인 연동 공정 가동 시작.
@@ -24,3 +24,4 @@ echo [INFO] 테스트 시나리오 종료. 가동 프로세스 및 웹 서버를
 echo ========================================================
 taskkill /f /im "Test1.exe" 2>nul
 taskkill /f /im "allure.exe" 2>nul
+exit /b 0
