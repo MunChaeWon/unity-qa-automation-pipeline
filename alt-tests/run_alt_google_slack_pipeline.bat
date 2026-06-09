@@ -47,9 +47,8 @@ if not "%SLACK_EXIT_CODE%"=="0" (
 )
 
 echo [START] Allure HTML 리포트 자동 팝업
-:: start 명령어를 통해 웹 서버 및 브라우저를 독립 프로세스로 실행하여 스크립트 멈춤을 방지합니다.
 start "" allure open alt-allure-report
-timeout /t 3 > nul
+ping 127.0.0.1 -n 4 > nul
 
 echo [END] Unity QA Google Sheets + Slack Pipeline Complete
 echo [INFO] 최종 pytest 종료 코드: %TEST_EXIT_CODE%
