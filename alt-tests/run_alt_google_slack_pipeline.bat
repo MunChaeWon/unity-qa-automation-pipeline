@@ -46,9 +46,8 @@ if not "%SLACK_EXIT_CODE%"=="0" (
     echo [WARNING] Slack 알림 전송 실패
 )
 
-echo [START] Allure HTML 리포트 자동 팝업
-start "" allure open alt-allure-report
-ping 127.0.0.1 -n 4 > nul
+echo [INFO] Allure HTML 리포트 빌드 완료 (alt-allure-report 폴더를 확인하소서)
+echo.
 
 echo [END] Unity QA Google Sheets + Slack Pipeline Complete
 echo [INFO] 최종 pytest 종료 코드: %TEST_EXIT_CODE%
