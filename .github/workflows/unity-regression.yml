@@ -11,19 +11,25 @@ on:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
+# [수정] 레포지토리 쓰기 권한 부족으로 인한 오류 방지를 위해 명시적 권한 부여
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   run-regression-tests:
     runs-on: self-hosted
     
     steps:
+      # [수정] Git 128 에러(유령 서브모듈 충돌) 방지를 위한 가동 옵션 조정
       - name: Checkout repository code
         uses: actions/checkout@v4
         with:
-          clean: false
+          clean: true          # 기존 워크스페이스의 오염된 캐시 및 잔재 파일을 강제 청소
+          submodules: false    # 잘못 인식된 가짜 서브모듈(gitlink) 추적을 원천 차단
 
       - name: Execute Unity QA Master Pipeline
         shell: cmd
-        # 새로 만든 무인 자동화 전용 배치 파일을 조준하도록 정밀 타격 설정을 변경했습니다
         run: |
           cd /d D:\funity\Test1
           call D:\funity\Test1\alt-tests\run_github_actions_pipeline.bat
