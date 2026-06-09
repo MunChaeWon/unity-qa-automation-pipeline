@@ -22,8 +22,7 @@ echo allure generate exit code: %ALLURE_GENERATE_EXIT_CODE%
 echo.
 
 if not "%ALLURE_GENERATE_EXIT_CODE%"=="0" (
-    echo Allure 리포트 생성 실패
-    pause
+    echo [ERROR] Allure 리포트 생성 실패
     exit /b %ALLURE_GENERATE_EXIT_CODE%
 )
 
@@ -34,7 +33,7 @@ echo jira upload exit code: %JIRA_EXIT_CODE%
 echo.
 
 if not "%JIRA_EXIT_CODE%"=="0" (
-    echo Jira 업로드 실패
+    echo [WARNING] Jira 업로드 실패 (프로세스는 계속 진행됩니다)
 )
 
 echo [START] Slack 알림 전송
@@ -44,17 +43,10 @@ echo slack notification exit code: %SLACK_EXIT_CODE%
 echo.
 
 if not "%SLACK_EXIT_CODE%"=="0" (
-    echo Slack 알림 전송 실패
+    echo [WARNING] Slack 알림 전송 실패
 )
 
-echo [START] Allure HTML 리포트 열기
-call allure open alt-allure-report
-set ALLURE_OPEN_EXIT_CODE=%ERRORLEVEL%
-echo allure open exit code: %ALLURE_OPEN_EXIT_CODE%
-echo.
-
 echo [END] Unity QA Google Sheets + Slack Pipeline Complete
-echo pytest exit code: %TEST_EXIT_CODE%
-pause
+echo [INFO] 최종 pytest 종료 코드: %TEST_EXIT_CODE%
 
 exit /b %TEST_EXIT_CODE%
