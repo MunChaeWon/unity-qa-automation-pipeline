@@ -32,4 +32,4 @@ jobs:
         shell: cmd
         run: |
           cd /d D:\funity\Test1
-          call D:\funity\Test1\alt-tests\run_github_actions_pipeline.bat
+          call D:\funity\Test1\alt-tests\run_alt_google_slack_pipeline.bat
