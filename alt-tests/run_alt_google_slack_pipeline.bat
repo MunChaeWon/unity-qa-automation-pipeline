@@ -53,3 +53,5 @@ echo [END] Unity QA Google Sheets + Slack Pipeline Complete
 echo [INFO] 최종 pytest 종료 코드: %TEST_EXIT_CODE%
 
 exit /b %TEST_EXIT_CODE%
+echo [START] Allure 리포트 자동 오픈
+start "" "C:\Program Files\Git\cmd\allure.exe" open alt-allure-report
