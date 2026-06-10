@@ -15,7 +15,7 @@ echo [INFO] Unity 게임 프로세스 기동 완료. 소켓 포트 활성화를 
 timeout /t 10 >nul
 
 :: [3단계] 통합 테스트 및 마스터 파이프라인(Google Sheets / Slack) 배치 파일 호출
-echo [INFO] 마스터 자동화 파이프라인 연동 공정 가동 시작.
+echo [INFO] 자동화 테스트 시작
 call "D:\funity\Test1\alt-tests\run_alt_google_slack_pipeline.bat"
 
 :: [4단계] 테스트 완료에 따른 시스템 자원 회수 및 프로세스 강제 종료

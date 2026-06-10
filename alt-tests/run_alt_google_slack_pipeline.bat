@@ -46,7 +46,7 @@ if not "%SLACK_EXIT_CODE%"=="0" (
     echo [WARNING] Slack 알림 전송 실패
 )
 
-echo [INFO] Allure HTML 리포트 빌드 완료 (alt-allure-report 폴더를 확인하소서)
+echo [INFO] Allure HTML 리포트 빌드 완료 (alt-allure-report 폴더 확인)
 echo.
 
 echo [END] Unity QA Google Sheets + Slack Pipeline Complete
